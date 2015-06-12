@@ -1,0 +1,11 @@
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name, required: true %>
+  <%= f.association :dose %>
+
+
+  <%= f.button :submit %>
+<% end %>
+
+

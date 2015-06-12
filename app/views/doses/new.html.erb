@@ -1,0 +1,8 @@
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :description, label: 'add a dose' %>
+  <%= f.association :ingredient %>
+
+  <%= f.button :submit, inline_label: 'save dose' %>
+<% end %>
