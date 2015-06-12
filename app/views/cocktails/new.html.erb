@@ -1,9 +1,11 @@
-<%= simple_form_for([@cocktail, @dose]) do |f| %>
+<%= simple_form_for(@cocktail, html: { multipart: true }) do |f| %>
   <%= f.error_notification %>
 
   <%= f.input :name, required: true %>
-  <%= f.association :dose %>
-
+  <p>
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+  </p>
 
   <%= f.button :submit %>
 <% end %>
